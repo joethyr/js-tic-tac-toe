@@ -4,7 +4,7 @@
 
 :root {
   --space-size: 100px;
-  --mark-size: cal(var(--space-size) * .85);
+  --mark-size: cal(var(--space-size) * .8);
 }
 
 body {
@@ -25,6 +25,26 @@ body {
 .space {
   width: var(--space-size);
   height: var(--space-size);
-  background-color: #FFC857;
-  border: 1px solid black;
+  /* background-color: #FFC857; */
+  border: 2px solid black;
+}
+
+.space:first-child,
+.space:nth-child(2),
+.space:nth-child(3) {
+  border-top: none;
+}
+
+.space:nth-child(3n + 1) {
+  border-left: none;
+}
+
+.space:nth-child(3n + 3) {
+  border-right: none;
+}
+
+.space:nth-child(7),
+.space:nth-child(8),
+.space:last-child {
+  border-bottom: none;
 }
