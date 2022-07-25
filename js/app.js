@@ -5,3 +5,11 @@ const gameBoard = () => {
     board
   }
 }
+
+// factory for creating players
+const Player = (name) => {
+  const getName = () => name
+  return {
+    getName
+  }
+}
