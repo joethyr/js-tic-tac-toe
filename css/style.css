@@ -1,0 +1,30 @@
+*::before , *::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --space-size: 100px;
+  --mark-size: cal(var(--space-size) * .85);
+}
+
+body {
+  margin: 0;
+}
+
+.board {
+  height: 100vh;
+  width: auto;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+  grid-template-columns: repeat(3, auto)
+}
+
+.space {
+  width: var(--space-size);
+  height: var(--space-size);
+  background-color: #FFC857;
+  border: 1px solid black;
+}
