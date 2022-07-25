@@ -1,10 +1,11 @@
-*::before , *::after {
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
 :root {
   --space-size: 100px;
-  --mark-size: cal(var(--space-size) * .8);
+  --mark-size: calc(var(--space-size) * 0.8);
 }
 
 body {
@@ -19,7 +20,7 @@ body {
   align-content: center;
   justify-items: center;
   align-items: center;
-  grid-template-columns: repeat(3, auto)
+  grid-template-columns: repeat(3, auto);
 }
 
 .space {
@@ -27,6 +28,7 @@ body {
   height: var(--space-size);
   /* background-color: #FFC857; */
   border: 2px solid black;
+  cursor: pointer;
 }
 
 .space:first-child,
@@ -47,4 +49,50 @@ body {
 .space:nth-child(8),
 .space:last-child {
   border-bottom: none;
+}
+
+.space > i {
+  display: grid;
+  justify-content: center;
+  padding: 0.5rem;
+  cursor: not-allowed;
+}
+
+.win-prompt {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 4rem;
+  flex-direction: column;
+}
+
+.win-prompt-text {
+  margin-bottom: 1rem;
+}
+
+.win-prompt button {
+  font-size: 2.5rem;
+  background-color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.win-prompt button:hover {
+  font-size: 2.5rem;
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+}
+
+.win-prompt.show {
+  display: flex;
 }
